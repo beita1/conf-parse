@@ -17,6 +17,9 @@
     <ClCompile Include="setting.cpp">
       <Filter>common</Filter>
     </ClCompile>
+    <ClCompile Include="assist_marco.h">
+      <Filter>common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="setting.h">

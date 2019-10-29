@@ -21,6 +21,8 @@
 #include <iostream>
 #include <boost/program_options.hpp>
 
+#include "assist_marco.h"
+
 using namespace std;
 using namespace boost::program_options;
 
@@ -42,8 +44,12 @@ public:
 
 	void Init(int argc, char* argv[]);
 
-	int GetInt(string key);//无key或者value返回-1;
-	string GetString(string key);//无key或者value返回空字符串;
-	char GetChar(string key);//无key或者value返回空字符;
-	wstring GetWstring(string key);
+	DEFINE_PROPERTY_READONLY(char, test_mode);
+	DEFINE_PROPERTY_REF_READONLY(string, test_file_path);
+
+	//效率问题
+	//int GetInt(string key);//无key或者value返回-1;
+	//string GetString(string key);//无key或者value返回空字符串;
+	//char GetChar(string key);//无key或者value返回空字符;
+	//wstring GetWstring(string key);
 };
